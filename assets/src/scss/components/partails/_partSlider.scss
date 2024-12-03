@@ -1,0 +1,91 @@
+.partSlider{
+  padding-top: toRem(30);
+  padding-bottom: toRem(50);
+  @include media(lg) {
+    padding-top: toRem(30);
+    padding-bottom: toRem(90);
+  }
+  &__title{
+    text-align: center;
+    padding-bottom: toRem(42);
+  }
+  &__slider{
+    width: 95%;
+    margin: 0 auto;
+    @include media(hd) {
+      width: 91%;
+    }
+    .swiper{
+      @include media(lg) {
+        padding: 0 toRem(35);
+      }
+    }
+    .swiper-slide{
+      height: toRem(217);
+      cursor: pointer;
+      .image{
+        padding: 0 toRem(20);
+        height: 100%;
+        @include media(lg) {
+          padding: 0;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .information{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 1.25rem;
+        text-align:center;
+        background: rgba(0,0,0,.8);
+        transform: translateY(0);
+        transition: all .3s ease;
+        @include media(md) {
+          transform: translateY(100%);
+        }
+        &:hover{
+          background: rgba(0,0,0,.4);
+        }
+        a{
+          display: inline-block;
+          font-family: var(--f-inter),sans-serif;
+          font-weight: 500;
+          padding: 10px 15px;
+          line-height: 1;
+          font-size: toRem(12);
+          @include media(md) {
+            font-size: toRem(14);
+          }
+        }
+      }
+      &:hover{
+        .information{
+          transform: translateY(0);
+        }
+      }
+    }
+    .swiper-button-prev,.swiper-button-next {
+      width: toRem(12);
+      &:after{
+        content: none;
+      }
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next{
+      right: 0;
+    }
+  }
+  &__btn{
+    text-align: center;
+    margin-top: toRem(42);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

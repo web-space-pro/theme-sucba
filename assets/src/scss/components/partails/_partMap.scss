@@ -1,0 +1,35 @@
+.partMap{
+  &__title{
+    padding-top: toRem(35);
+    padding-bottom: toRem(20);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include media(xl) {
+      padding-top: toRem(70);
+      padding-bottom: toRem(40);
+    }
+    &--address{
+      font-weight: 400;
+      font-size: toRem(14);
+      text-align: right;
+      font-family: var(--f-unbounded),sans-serif;
+      margin-top: toRem(15);
+      @include media(md) {
+        margin-top: 0;
+      }
+      @include media(lg) {
+        font-size: toRem(16);
+      }
+      @include media(xl) {
+        font-size: toRem(18);
+      }
+    }
+  }
+  #map{
+    min-height: toRem(360);
+    @include media(xl) {
+      min-height: toRem(460);
+    }
+  }
+}

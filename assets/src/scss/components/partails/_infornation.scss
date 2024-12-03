@@ -1,0 +1,64 @@
+.information{
+  padding: toRem(45) 0;
+  @include media(xl) {
+    padding: toRem(70) 0;
+  }
+  &__image{
+    position: relative;
+    img.movavic{
+      position: absolute;
+      top: -16%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include media(sm) {
+        left: -17%;
+      }
+    }
+  }
+  &__content{
+    font-weight: 400;
+    font-size: toRem(14);
+    line-height: 1.25;
+    font-family: var(--f-inter),sans-serif;
+    padding-top: toRem(25);
+    p{
+      margin-bottom: toRem(20);
+    }
+  }
+  &__work{
+    font-size: toRem(14);
+    line-height: 1.25;
+    font-family: var(--f-inter),sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: toRem(25);
+    flex-wrap: wrap;
+    @include media(lg) {
+      margin-top: toRem(55);
+    }
+    @include media(lg) {
+      margin-top: toRem(55);
+    }
+    > div{
+      margin-bottom: toRem(16);
+      width: 50%;
+      @include media(sm) {
+        width: auto;
+        margin: 0;
+      }
+    }
+    h3{
+      font-weight: 700;
+      margin-bottom: toRem(5);
+      text-transform: uppercase;
+      color: var(--c-brown-primary);
+    }
+    span{
+      font-weight: 400;
+      color: var(--c-white-primary);
+      font-size: toRem(14);
+    }
+  }
+}

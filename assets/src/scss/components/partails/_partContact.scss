@@ -1,0 +1,35 @@
+.partOne{
+  background: var(--c-white-primary);
+  .row--flex{
+    display: block;
+    height: 100%;
+    @include media(lg) {
+      display: flex;
+    }
+  }
+  &__title{
+    text-align: center;
+    padding-top: toRem(35);
+    @include media(sm) {
+      padding-top: toRem(55);
+    }
+  }
+  &__form{
+    padding-top: toRem(25);
+    margin-bottom: toRem(40);
+    @include media(lg) {
+      padding-top: toRem(40);
+    }
+  }
+  &__image{
+    height: 100%;
+    padding-top: 13%;
+    display: none;
+    @include media(lg) {
+      display: block;
+    }
+    .image{
+      width: 86%;
+    }
+  }
+}

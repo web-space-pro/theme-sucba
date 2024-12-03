@@ -1,0 +1,91 @@
+.infoPrograms{
+  padding-bottom: 20px;
+  padding-top: toRem(35);
+  @include media(sm) {
+    padding-top: toRem(79);
+  }
+  &__item{
+    margin-bottom: toRem(40);
+    @include media(xl) {
+      margin-bottom: toRem(80);
+    }
+    &:last-child,&:first-child{
+      margin-bottom: 0;
+    }
+    &:last-child{
+      .infoPrograms__image{
+        display: none;
+        @include media(lg) {
+          display: block;
+        }
+      }
+      
+
+    }
+  }
+  &__heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: toRem(30);
+    @include media(md) {
+      margin-bottom: toRem(90);
+    }
+    h2{
+      margin-bottom: toRem(15);
+    }
+    h3{
+      font-family: var(--f-inter),sans-serif;
+      font-weight: 700;
+      font-size: toRem(10);
+      line-height: 1.25;
+      max-width: 95%;
+      margin: 0 auto;
+      @include media(md) {
+        font-size: toRem(18);
+      }
+      @include media(xl) {
+        font-size: toRem(24);
+      }
+    }
+  }
+  &__content{
+    font-size: toRem(14);
+    line-height: 1.25;
+    font-family: var(--f-inter),sans-serif;
+    font-weight: 300;
+    h4{
+      font-family: var(--f-inter),sans-serif;
+      font-size: toRem(18);
+      margin-bottom: toRem(25);
+      font-weight: bold;
+      @include media(xl) {
+        font-size: toRem(24);
+      }
+    }
+    p,ul{
+      margin-bottom: toRem(35);
+      text-transform: uppercase;
+    }
+    ul{
+      list-style: disc;
+      margin-left: toRem(15);
+    }
+
+  }
+  &__video{
+    position: relative;
+  }
+  &__image{
+    max-width: toRem(430);
+    margin: 0 0 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &--flex{
+    @include media(lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

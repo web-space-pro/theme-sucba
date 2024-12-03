@@ -1,0 +1,70 @@
+.link{
+  display: inline-block;
+  font-weight: 800;
+  font-family: var(--f-unbounded),sans-serif;
+  font-size: .65rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  position: relative;
+  color: var(--c-white-primary);
+  @include media(sm) {
+    font-size: 1rem;
+  }
+  &.underline{
+    &:after{
+      content: '';
+      position: absolute;
+      width: 97%;
+      transform: scaleX(0);
+      border-radius: toRem(5);
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      background: currentcolor;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover{
+      &:after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+
+.btn{
+  font-weight: 800;
+  font-size: toRem(12);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: toRem(10) toRem(18);
+  display: inline-block;
+  font-family: var(--f-unbounded),sans-serif;
+  @include media(sm) {
+    padding: toRem(18) toRem(18);
+    min-width: toRem(298);
+    font-size: toRem(14);
+  }
+  @include media(md) {
+    padding: toRem(26) toRem(26);
+    font-size: toRem(16);
+  }
+  @include media(xl) {
+    font-size: toRem(18);
+  }
+  &.btn-primary{
+    color: var(--c-white-primary);
+    border: 1px solid var(--c-white-primary);
+    border-radius: 150px;
+    background: var(--c-black-primary);
+    transition: ease-in .3s all;
+    &:hover{
+      background: var(--c-brown-primary);
+    }
+  }
+}

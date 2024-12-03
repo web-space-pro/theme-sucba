@@ -1,0 +1,54 @@
+.partReviews{
+  padding: toRem(60) 0;
+  background: var(--c-white-primary);
+  color: var(--c-black-primary);
+  position: relative;
+  &__title{
+    margin-bottom: toRem(30);
+    text-align: center;
+    @include media(md) {
+      margin-bottom: toRem(60);
+    }
+  }
+  h2{
+    color: var(--c-black-primary);
+  }
+  .wpcf7 > * input, .wpcf7 textarea{
+    text-transform: none;
+  }
+  .container{
+    position: relative;
+    z-index: 2;
+  }
+  &__image{
+    position: absolute;
+    top: 23%;
+    bottom: 0;
+    z-index: 0;
+    &.--l{
+      left: 6%;
+      max-width: 100%;
+      max-height: 50%;
+      @include media(xl) {
+        max-width: toRem(378);
+        max-height: toRem(282);
+      }
+    }
+    &.--r{
+      right: 0;
+      max-width: 100%;
+      max-height: 50%;
+      @include media(xl) {
+        max-width: toRem(420);
+        max-height: toRem(225);
+      }
+
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+}

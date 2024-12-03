@@ -1,0 +1,20 @@
+$media-types: (
+        xs: '(min-width: 320px)',
+        sm: '(min-width: 576px)',
+        md: '(min-width: 768px)',
+        lg: '(min-width: 992px)',
+        xl: '(min-width: 1201px)',
+        hd: '(min-width: 1367px)',
+        rwd: '(min-width: 1441px)',
+);
+@mixin media($media) {
+  @media #{map-get($media-types, $media)} {
+    @content;
+  }
+}
+
+
+@function toRem($value) {
+  $remValue: ($value / 16) + rem; 
+  @return $remValue;
+}

@@ -1,0 +1,28 @@
+/* CONFIG */
+@import "config/libs";
+@import "config/variables";
+@import "config/mixins";
+@import "config/_reset.css";
+@import "config/global";
+
+ /* COMMON COMPONENTS */
+
+@import "components/common/btn_link";
+@import "components/common/header";
+@import "components/common/footer";
+@import "components/common/video";
+@import "components/common/contactForm";
+@import "components/common/map";
+
+
+  /* PARTAILS COMPONENTS */
+@import "components/partails/hero";
+@import "components/partails/infornation";
+@import "components/partails/partContact";
+@import "components/partails/infoPrograms";
+@import "components/partails/partSlider";
+@import "components/partails/partReviews";
+@import "components/partails/partMap";
+
+//page
+@import "components/partails/single-page";

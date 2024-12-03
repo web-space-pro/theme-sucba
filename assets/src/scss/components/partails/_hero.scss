@@ -1,0 +1,97 @@
+.hero{
+  &.no-mask{
+    padding-top: toRem(10);
+    @include media(lg) {
+      max-width: toRem(40);
+    }
+    @include media(xl) {
+      padding-top: toRem(50);
+    }
+  }
+  &__content{
+    &--info{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: start;
+      margin-top: toRem(20);
+      @include media(sm) {
+        flex-direction: row;
+        align-items: center;
+        margin-top: toRem(35);
+      }
+    }
+    .btn{
+      margin-top: toRem(20);
+      @include media(sm) {
+        margin-top: 0;
+      }
+    }
+    &--sity{
+      font-size: toRem(10);
+      text-transform: uppercase;
+      color: var(--c-white-primary);
+      padding-left: 0;
+      font-weight: 900;
+      font-family: var(--f-unbounded);
+      @include media(sm) {
+        padding-left: toRem(20);
+      }
+      @include media(md) {
+        font-size: toRem(18);
+        padding-left: toRem(60);
+      }
+    }
+  }
+  &__mavic3D{
+    margin-top: toRem(50);
+    margin-bottom: toRem(50);
+    //overflow: hidden;
+    position: relative;
+    @include media(lg) {
+      margin-top: 0;
+      margin-bottom: 0;
+      top: -200px;
+    }
+    &--box{
+      max-height: toRem(250);
+      height: toRem(250);
+      @include media(lg) {
+        max-height: toRem(350);
+        height: toRem(450);
+      }
+      @include media(lg) {
+        max-height: toRem(450);
+        height: toRem(450);
+      }
+      model-viewer{
+        height: 300px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        @include media(md){
+          height: 400px;
+          top: -65px;
+        }
+        @include media(lg) {
+          height: 600px;
+          top: auto;
+        }
+      }
+    }
+  }
+  &__image{
+    &--box{
+      max-width: toRem(400);
+      margin: 0 auto;
+      @include media(lg) {
+        max-width: 100%;
+      }
+    }
+  }
+  .ing{
+    @include media(lg) {
+      flex: 0 0 48%;
+      max-width: 48%;
+    }
+  }
+}
